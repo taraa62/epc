@@ -32,8 +32,8 @@ export class AuthController {
   @ApiCreatedResponse({
     description: 'change password',
   })
-  public async resetPassword(@User() user: IUser, @Body() dto: UserResetPasswordDto): Promise<CommonSuccess> {
-    return await this.authService.resetPassword(user, dto);
+  public resetPassword(@User() user: IUser, @Body() dto: UserResetPasswordDto): Promise<CommonSuccess> {
+    return this.authService.resetPassword(user, dto);
   }
 
   @Post('login')
@@ -41,8 +41,8 @@ export class AuthController {
     status: 200,
     description: 'login user',
   })
-  public async login(@Body() dto: UserLoginDto): Promise<UserLoginRespDto> {
-    return await this.authService.login(dto);
+  public login(@Body() dto: UserLoginDto): Promise<UserLoginRespDto> {
+    return this.authService.login(dto);
   }
 
 }
