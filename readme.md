@@ -1,4 +1,4 @@
-How is it run?
+How does it run?
 
 - download files from `/prod`
 - run command: `docker-compose up -d`
